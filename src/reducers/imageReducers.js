@@ -5,9 +5,10 @@ import * as types from '../constants/actionTypes';
 export default function (state = initialState.images, action) {
   switch (action.type) {
     case types.FLICKR_IMAGES_SUCCESS:
-      return [...state, action.images];
+      return [...action.images];
     case types.SELECTED_IMAGE:
-      return { ...state, selectedImage: action.image };
+      Object.assign(state, {selectedImage: action.image});
+      return  state;
     default:
       return state;
   }

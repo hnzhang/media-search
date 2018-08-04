@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
-import images from './imageReducer';
-import videos from './videoReducer';
+import images from './imageReducers';
+import videos from './videoReducers';
 
 // Combines all reducers to a single reducer function
 const rootReducer = combineReducers({
   images, 
-  videos
+  videos,
 });
 
 export default rootReducer;
