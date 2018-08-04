@@ -49,12 +49,16 @@ class MediaGalleryPage extends Component {
 
    //         <VideoPage videos={videos} selectedVideo={selectedVideo} onHandleSelectVideo={this.handleSelectVideo} />
   return (
-  <div className="container-fluid">
-    {images ? 
-      <div>
-        <input type="text" ref={ref=>(this.query=ref)}/>
-        <input type='submit' className='btn btn-primary' value='Search Library' onClick={this.handleSearch} />
-          <div className='row'>
+  <div >
+    {images ?
+      <div> 
+        <form className="form-inline">
+          <div className="form-group">
+            <input type="text" className="form-control" ref={ref=>(this.query=ref)}/>
+            <input type='submit' className='btn btn-primary' value='Search Library' onClick={this.handleSearch} />
+          </div>
+        </form>
+          <div className='row' className='container-fluid'>
             <PhotoPage images={images} selectedImage={selectedImage} onHandleSelectedImage={this.handleSelectImage} />
             <VideoPage videos={videos} selectedVideo={selectedVideo} onHandleSelectVideo={this.handleSelectVideo} />
           </div>

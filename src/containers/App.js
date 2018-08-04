@@ -15,7 +15,7 @@ class App extends Component {
             <div className="App-intro">
                 <Switch>
                      <Route exact path="/" component={HomePage}/>
-                     <Route path="/library" component={MediaGalleryPage}/>
+                     <Route path="/Search" component={MediaGalleryPage}/>
                      <Redirect to="/" />
                 </Switch>
             </div>
@@ -23,12 +23,5 @@ class App extends Component {
         );
     }
 }
-
-/** the following is deprecated, please use npm module prop-types instead
-App.propTypes = {
-    children: PropTypes.Object.isRequired
-};
-
-*/
 
 export default App;
