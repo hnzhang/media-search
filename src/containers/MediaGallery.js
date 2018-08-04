@@ -58,7 +58,7 @@ class MediaGalleryPage extends Component {
             <input type='submit' className='btn btn-primary' value='Search Library' onClick={this.handleSearch} />
           </div>
         </form>
-          <div className='row' className='container-fluid'>
+          <div className='row'>
             <PhotoPage images={images} selectedImage={selectedImage} onHandleSelectedImage={this.handleSelectImage} />
             <VideoPage videos={videos} selectedVideo={selectedVideo} onHandleSelectVideo={this.handleSelectVideo} />
           </div>
